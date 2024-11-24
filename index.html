@@ -1,20 +1,32 @@
-
-<html>
-    <head>
-        <title>Dilemme du Tramway</title>
-        <style>
-            body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; margin-top: 50px;}
-            h1 { color: #333; }
-            .scenario { background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-            button { margin: 10px; padding: 10px 20px; font-size: 18px; cursor: pointer; background-color: #4CAF50; color: white; border: none; border-radius: 5px; }
-            button:hover { background-color: #45a049; }
-        </style>
-    </head>
-    <body>
-        <h1>Bienvenue dans le Dilemme du Tramway</h1>
-        <div class="scenario">
-            <p>Bienvenue ! Vous allez explorer plusieurs scénarios du dilemme du tramway. À chaque étape, vous devrez prendre une décision.</p>
-            <button onclick="window.location.href='scenario1.html'">Commencer</button>
-        </div>
-    </body>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dilemme du Tramway</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Bienvenue au Dilemme du Tramway</h1>
+      <p>
+        Explorez plusieurs scénarios, prenez des décisions difficiles, et voyez
+        les conséquences !
+      </p>
+    </header>
+    <main>
+      <section class="scenarios">
+        <a href="scenario1.html" class="scenario-link"
+          >Scénario 1 : Le classique</a
+        >
+        <a href="scenario2.html" class="scenario-link"
+          >Scénario 2 : Le choix moral</a
+        >
+        <a href="scenario3.html" class="scenario-link"
+          >Scénario 3 : L'inconnu</a
+        >
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>

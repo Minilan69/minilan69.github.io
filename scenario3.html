@@ -3,28 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scénario 2 - Le choix moral</title>
+    <title>Scénario 3 - L'inconnu</title>
     <link rel="stylesheet" href="scenarios.css" />
   </head>
   <body>
     <header>
-      <h1>Scénario 2 : Le choix moral</h1>
+      <h1>Scénario 3 : L'inconnu</h1>
     </header>
     <main>
       <section class="scenario-content">
         <p>
-          Vous pouvez sauver un enfant ou trois adultes, mais vous ne connaissez
-          pas les conséquences à long terme. Que décidez-vous ?
+          Un tramway déraille, mais vous ne savez pas combien de personnes sont
+          sur chacune des voies. Faites un choix sans informations
+          supplémentaires.
         </p>
-        <button onclick="choose('enfant')">Sauver l'enfant</button>
-        <button onclick="choose('adultes')">Sauver les adultes</button>
+        <button onclick="choose('changer')">Changer de voie</button>
+        <button onclick="choose('rien')">Ne rien faire</button>
       </section>
     </main>
     <script>
       function choose(choice) {
         alert(
           "Votre choix : " +
-            (choice === "enfant" ? "Sauver l'enfant" : "Sauver les adultes")
+            (choice === "changer" ? "Changer de voie" : "Ne rien faire")
         );
       }
     </script>
