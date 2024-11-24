@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scénario 2 - Le choix moral</title>
-    <link rel="stylesheet" href="scenarios.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -16,17 +16,12 @@
           Vous pouvez sauver un enfant ou trois adultes, mais vous ne connaissez
           pas les conséquences à long terme. Que décidez-vous ?
         </p>
-        <button onclick="choose('enfant')">Sauver l'enfant</button>
-        <button onclick="choose('adultes')">Sauver les adultes</button>
+        <button onclick="recordChoice('enfant')">Sauver l'enfant</button>
+        <button onclick="recordChoice('adultes')">Sauver les adultes</button>
+        <div id="stats"></div>
       </section>
+      <a href="index.html" class="back-link">Retour à l'accueil</a>
     </main>
-    <script>
-      function choose(choice) {
-        alert(
-          "Votre choix : " +
-            (choice === "enfant" ? "Sauver l'enfant" : "Sauver les adultes")
-        );
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

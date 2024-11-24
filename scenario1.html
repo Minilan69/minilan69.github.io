@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scénario 1 - Le classique</title>
-    <link rel="stylesheet" href="scenarios.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -17,21 +17,16 @@
           pouvez le détourner vers une autre voie, où une seule personne est
           attachée. Que faites-vous ?
         </p>
-        <button onclick="choose('détourner')">
+        <button onclick="recordChoice('détourner')">
           Détourner le tramway (sauver 5, sacrifier 1)
         </button>
-        <button onclick="choose('rien')">
+        <button onclick="recordChoice('rien')">
           Ne rien faire (laisser les 5 mourir)
         </button>
+        <div id="stats"></div>
       </section>
+      <a href="index.html" class="back-link">Retour à l'accueil</a>
     </main>
-    <script>
-      function choose(choice) {
-        alert(
-          "Votre choix : " +
-            (choice === "détourner" ? "Détourner le tramway" : "Ne rien faire")
-        );
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

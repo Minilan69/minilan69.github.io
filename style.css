@@ -4,22 +4,17 @@ body {
   padding: 0;
   background-color: #f9f9f9;
   color: #333;
+  text-align: center;
 }
 
 header {
   background-color: #4caf50;
   color: white;
-  text-align: center;
   padding: 2rem 0;
 }
 
 h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-p {
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 main {
@@ -33,7 +28,8 @@ main {
   gap: 1.5rem;
 }
 
-.scenario-link {
+.scenario-link,
+.back-link {
   text-decoration: none;
   font-size: 1.5rem;
   background-color: #4caf50;
@@ -43,6 +39,32 @@ main {
   transition: background-color 0.3s ease;
 }
 
-.scenario-link:hover {
+.scenario-link:hover,
+.back-link:hover {
+  background-color: #45a049;
+}
+
+.scenario-content {
+  background-color: white;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
   background-color: #45a049;
 }

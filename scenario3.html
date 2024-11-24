@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scénario 3 - L'inconnu</title>
-    <link rel="stylesheet" href="scenarios.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -17,17 +17,12 @@
           sur chacune des voies. Faites un choix sans informations
           supplémentaires.
         </p>
-        <button onclick="choose('changer')">Changer de voie</button>
-        <button onclick="choose('rien')">Ne rien faire</button>
+        <button onclick="recordChoice('changer')">Changer de voie</button>
+        <button onclick="recordChoice('rien')">Ne rien faire</button>
+        <div id="stats"></div>
       </section>
+      <a href="index.html" class="back-link">Retour à l'accueil</a>
     </main>
-    <script>
-      function choose(choice) {
-        alert(
-          "Votre choix : " +
-            (choice === "changer" ? "Changer de voie" : "Ne rien faire")
-        );
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
