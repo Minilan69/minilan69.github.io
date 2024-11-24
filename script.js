@@ -6,6 +6,7 @@ function recordChoice(choice) {
     enfant: 0,
     adultes: 0,
     changer: 0,
+    rien2: 0,
   };
   stats[choice] = (stats[choice] || 0) + 1;
   localStorage.setItem("tramwayStats", JSON.stringify(stats));
@@ -27,9 +28,25 @@ function displayStats(stats) {
             <p>Sauver l'enfant : ${stats.enfant || 0} votes</p>
             <p>Sauver les adultes : ${stats.adultes || 0} votes</p>
             <p>Changer de voie : ${stats.changer || 0} votes</p>
+            <p>Ne rien faire : ${stats.rien2 || 0} votes</p>
         `;
   }
 }
+function displayStats(stats) {
+  const statsDiv = document.getElementById("stats");
+  if (statsDiv) {
+    statsDiv.innerHTML = `
+            <h3>Statistiques des choix :</h3>
+            <p>Détourner le tramway : ${stats.détourner || 0} votes</p>
+            <p>Ne rien faire : ${stats.rien || 0} votes</p>
+            <p>Sauver l'enfant : ${stats.enfant || 0} votes</p>
+            <p>Sauver les adultes : ${stats.adultes || 0} votes</p>
+            <p>Changer de voie : ${stats.changer || 0} votes</p>
+            <p>Ne rien faire : ${stats.rien2 || 0} votes</p>
+        `;
+  }
+}
+
 
 function displayAIDecision(userChoice) {
   const aiDecisionDiv = document.getElementById("ai-decision");
@@ -53,7 +70,7 @@ function displayAIDecision(userChoice) {
   }
 
   // Décision de l'IA pour le Scénario 3
-  if (userChoice === "changer" || userChoice === "rien") {
+  if (userChoice === "changer" || userChoice === "rien2") {
     aiChoice = "changer";
     explanation =
       "L'IA a choisi de changer de voie, pensant qu'il est plus sûr d'agir que de rester inactif dans l'incertitude.";
