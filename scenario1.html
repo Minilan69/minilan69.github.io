@@ -17,12 +17,14 @@
           pouvez le détourner vers une autre voie, où une seule personne est
           attachée. Que faites-vous ?
         </p>
-        <button onclick="recordChoice('détourner')">
-          Détourner le tramway (sauver 5, sacrifier 1)
-        </button>
-        <button onclick="recordChoice('rien')">
-          Ne rien faire (laisser les 5 mourir)
-        </button>
+        <div class="button-container">
+          <button onclick="recordChoice('détourner')">
+            Détourner le tramway (sauver 5, sacrifier 1)
+          </button>
+          <button onclick="recordChoice('rien')">
+            Ne rien faire (laisser les 5 mourir)
+          </button>
+        </div>
         <div id="stats"></div>
       </section>
       <a href="index.html" class="back-link">Retour à l'accueil</a>
